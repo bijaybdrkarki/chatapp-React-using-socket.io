@@ -1,0 +1,70 @@
+:root {
+    --col-bg: #ffffff;
+    --col-bg-fg: #222222;
+    --col-accent1:  palevioletred;
+    --col-accent1-fg: #000000;
+    --col-accent2:  plum;
+    --col-accent2-fg: #000000;
+    --col-accent3:  mediumslateblue;
+    --col-accent3-fg: #ffffff;
+    --col-action: firebrick;
+    --col-action-fg: #ffffff;
+    --col-error: tomato;
+    --col-error-fg: #000000;
+    --font-body: serif;
+    --font-heading: sans-serif;
+    --animations: 0.3s;
+}
+.profile{
+ position: relative;    
+}
+.profile img{
+    width: 100%;
+    height: 45vh;
+}
+.profile p{
+    position: absolute;
+    left: 1.5em;
+    bottom: 2em;
+    color: white;
+    font-size: 1.5em;
+
+}
+.nextContainer{
+    margin: 0 auto;
+    width: fit-content;
+    padding: 2em 0;
+    text-align: center;
+}
+.next{
+    margin-bottom: 1em;    
+    display: grid;
+    grid-template-columns: min-content min-content 10em;    
+}
+.next span{
+    font-size: 4.5em;
+}
+.next p{
+    padding: 0.5em;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+.dateTime{
+    font-size: 1.2em;
+    background-color: var(--col-accent2-fg);
+    display: grid;
+    padding: 1em;
+    color: var(--col-bg);
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+}
+.day{
+    font-size: 2em;
+    text-align: right;
+}
+
+@media screen and (min-width: 40em) {
+    .profile img{
+        height: 65vh;
+    }
+}
