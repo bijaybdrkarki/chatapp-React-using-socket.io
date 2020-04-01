@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './weather.css'
 
 
-const Weather = (props) => {
+const Weather = () => {
 
     useEffect(() => {
         newWeather();
@@ -11,6 +12,7 @@ const Weather = (props) => {
     const [currtemp, setcurrTemp] = useState([]);
     const [feeltemp, setfeelTemp] = useState([]);
     const [temptime , setTemptime]= useState([]);
+    
     const newWeather = async ()=> {
         const data = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=Toronto&units=metric&APPID=3bea2aedc66d41364ecf6ab4d441c3f8`);
         const jsonData = await data.json();
@@ -36,13 +38,14 @@ const Weather = (props) => {
         setTemptime(time);
     }
     let tempData = [];
-    if (props.data === '4')
-    {
-        tempData = currtemp.slice( 0, 4);
-    }
-    else
+    
+    if (window.location.href.includes('/forecast') )
     {
         tempData = [...currtemp];
+        
+    }
+    else{
+        tempData = currtemp.slice( 0, 4);
     }
     const temp = tempData.map((temp1, index) => <div className="forecast" key={index}>
                         <p> Curr:{temp1} <span>&#176;C</span></p> 
@@ -52,7 +55,18 @@ const Weather = (props) => {
                         </div>
                         <p>Feels: {feeltemp[index]} <span>&#176;C</span></p>         
                     </div>);
-    return ( <>{temp}</>)
+    if (window.location.href.includes('/forecast') )
+    {
+    return ( <div className = "forecastContainer">
+        <Link to="/" className="backButton"><button>Back</button></Link> 
+       <div className="tempdata"> {temp} </div>
+    </div>)
+    }
+    else{
+        return ( <>
+            {temp}
+        </>)
+    }
 }
 
 export default Weather;

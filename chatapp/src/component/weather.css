@@ -6,7 +6,7 @@
     background-color: lightblue;
 }
 .forecast{
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     
 }
 .forecast p{
@@ -14,4 +14,29 @@
 }
 .iconTime p{
     display: inline-block;
+}
+.backButton button{
+    font-size: 1.1em;
+    padding: 0.5em;
+}
+.forecastContainer{
+    padding: 1em 1em 1em 2.5em;
+    
+}
+.tempdata{
+    text-align: center;
+}
+@media screen and (min-width: 40em) {
+    .tempdata{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media screen and (min-width: 60em) {
+    .tempdata{
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 }
