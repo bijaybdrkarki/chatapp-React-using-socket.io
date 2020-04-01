@@ -50,6 +50,7 @@
     vertical-align: middle;
 }
 .dateTime{
+    min-height: 240px;
     font-size: 1.2em;
     background-color: var(--col-accent2-fg);
     display: grid;
@@ -58,6 +59,10 @@
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr;
 }
+.dateTime div{
+  margin: auto 0;       
+}
+
 .day{
     font-size: 2em;
     text-align: right;
@@ -67,4 +72,17 @@
     .profile img{
         height: 65vh;
     }
+    .homegrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+   
+}
+
+@media screen and (min-width: 60em) {
+    .homegrid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+
 }
