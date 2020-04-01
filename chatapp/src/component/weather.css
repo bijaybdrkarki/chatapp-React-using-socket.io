@@ -1,0 +1,17 @@
+.weather{
+    padding: 1em;
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    background-color: lightblue;
+}
+.forecast{
+    margin-bottom: 1em;
+    
+}
+.forecast p{
+    font-size: 1.2em;
+}
+.iconTime p{
+    display: inline-block;
+}
