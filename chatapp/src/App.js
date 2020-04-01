@@ -9,11 +9,11 @@ const App =() => {
   function menu(){
       if (menuclass === 'others')
       {
-          setmenuclass('others open');
+        setmenuclass('others open');
       }
       else
       {
-          setmenuclass('others');
+        setmenuclass('others');
       }
   }
     return (
