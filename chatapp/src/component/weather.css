@@ -28,6 +28,7 @@
 }
 .fullheading{
     margin-bottom: 2em;
+    text-align: center;
 }
 
 @media screen and (min-width: 40em) {
@@ -38,7 +39,7 @@
     .headingButton{
         display: grid;
         grid-template-columns: minmax(auto, auto) 1fr; 
-     }
+    }
     
 
 }
