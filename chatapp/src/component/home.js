@@ -37,12 +37,14 @@ const Home = () => {
                     <Clock  format={'HH:mm:ss A'} ticking={true} timezone={'America/Toronto'} />
                 </div>
             </section>
-            <section className="weather">
+            <section>
+                <h1 className="heading">Weather forecast</h1>
+                <div className="weather">
                 <Weather  />
                 <Link to='/forecast'>
                 <p>See more</p>
                 </Link> 
-                    
+                 </div>   
             </section>
         </div>
     </>)

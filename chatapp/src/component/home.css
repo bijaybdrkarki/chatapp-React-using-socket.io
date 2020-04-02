@@ -67,6 +67,12 @@
     font-size: 2em;
     text-align: right;
 }
+.heading{
+    background-color: lightblue;
+    text-align: center;
+    margin: 0;
+    padding-top: 0.5em;
+}
 
 @media screen and (min-width: 40em) {
     .profile img{
@@ -76,6 +82,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .dateTime{
+        font-size: 1.4em;
+    }
    
 }
 
@@ -83,6 +92,8 @@
     .homegrid{
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+    .dateTime{
+        font-size: 1.6em;
+    }
 
 }
