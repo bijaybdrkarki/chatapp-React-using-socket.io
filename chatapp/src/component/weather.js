@@ -58,7 +58,10 @@ const Weather = () => {
     if (window.location.href.includes('/forecast') )
     {
     return ( <div className = "forecastContainer">
+        <div className="headingButton">
         <Link to="/" className="backButton"><button>Back</button></Link> 
+        <h1 className="fullheading">Weather forecast for Next 5 days (3Hrs interval) </h1>
+        </div>
        <div className="tempdata"> {temp} </div>
     </div>)
     }

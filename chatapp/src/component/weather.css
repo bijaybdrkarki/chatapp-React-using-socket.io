@@ -26,11 +26,20 @@
 .tempdata{
     text-align: center;
 }
+.fullheading{
+    margin-bottom: 2em;
+}
+
 @media screen and (min-width: 40em) {
     .tempdata{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .headingButton{
+        display: grid;
+        grid-template-columns: minmax(auto, auto) 1fr; 
+     }
+    
 
 }
 @media screen and (min-width: 60em) {
