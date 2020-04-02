@@ -30,34 +30,38 @@
     font-size: 1.5em;
 
 }
+
 .nextContainer{
+    min-height: 369px;
     margin: 0 auto;
+    padding: 5em 0;
     width: fit-content;
-    padding: 2em 0;
-    text-align: center;
 }
 .next{
-    margin-bottom: 1em;    
+    padding: 1em 0;
     display: grid;
     grid-template-columns: min-content min-content 10em;    
 }
-.next span{
+.icon{
     font-size: 4.5em;
 }
-.next p{
+.time{
     padding: 0.5em;
     font-size: 1.2em;
     vertical-align: middle;
 }
+.next span{
+    text-align: center;
+}
 .dateTime{
-    min-height: 240px;
+    min-height: 369px;
     font-size: 1.2em;
     background-color: var(--col-accent2-fg);
     display: grid;
     padding: 1em;
     color: var(--col-bg);
     grid-gap: 1em;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.8fr 1fr;
 }
 .dateTime div{
   margin: auto 0;       
