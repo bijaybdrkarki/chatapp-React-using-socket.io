@@ -1,17 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import Clock from 'react-live-clock';
 import './home.css';
 import userimg from './img/photo-1.jpeg';
 import Weather from './weather';
-// import { useState } from 'react';
 
 
 const Home = () => {
     var tempDate = new Date();
     var days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-    var currDate = tempDate.getFullYear() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getDate();
+    var months =["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+    var currDate = tempDate.getFullYear() + '-' + months[(tempDate.getMonth()+1)] + '-' + tempDate.getDate();
     
+   const [timeclock , settimeclock] = useState([]); 
+   
+    useEffect(() => {
+        time();
+        
+},[]);
+const time = async ()=> {
+    
+    const data =  (<Clock  format={'hh:mm:ss A'} ticking={true} timezone={'America/Toronto'} />)
+    
+    settimeclock(data);
+    
+}
     return (<>
         <div className="profile">
             <img src={userimg} alt="user pic" />
@@ -20,21 +33,21 @@ const Home = () => {
         <div className="homegrid">
             <section className="nextContainer">
                 <div className="next">
-                    <span className="material-icons">event</span>
-                    <p>14:00</p>
-                    <h2>Lunch <p>Hyatt, Toronto</p></h2>
+                    <span className="material-icons icon">event</span>
+                    <p className="time">14:00</p>
+                   <span><h2>Lunch </h2><p>Hyatt, Toronto</p></span>
                 </div>
                 <div className="next">
-                    <span className="material-icons">event</span>
-                    <p>14:30</p>
-                    <h2>Meeting <p> Hyatt, Toronto</p></h2>
+                    <span className="material-icons icon">event</span>
+                    <p className="time">14:30</p>
+                    <span><h2>Meeting </h2><p>Hyatt, Toronto</p></span>
                 </div>
             </section>
             <section className="dateTime">
                 <div className="day">{days[tempDate.getDay()]}</div>
                 <div>
                     <p>{currDate}</p>
-                    <Clock  format={'HH:mm:ss A'} ticking={true} timezone={'America/Toronto'} />
+                    { timeclock } 
                 </div>
             </section>
             <section>
