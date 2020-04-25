@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import Clock from 'react-live-clock';
 import './home.css';
 import userimg from './img/photo-1.jpeg';
 import Weather from './weather';
-
+import {userId} from '../App'
 
 const Home = () => {
     var tempDate = new Date();
@@ -16,15 +16,15 @@ const Home = () => {
    
     useEffect(() => {
         time();
-        
-},[]);
-const time = async ()=> {
+        return (()=> {settimeclock()})    
+    },[]);
+    const time = async ()=> {
     
-    const data =  (<Clock  format={'hh:mm:ss A'} ticking={true} timezone={'America/Toronto'} />)
+        const data =  (<Clock  format={'hh:mm:ss A'} ticking={true} timezone={'America/Toronto'} />)
+        settimeclock(data);
     
-    settimeclock(data);
-    
-}
+    }
+    let userid = useContext(userId);
     return (<>
         <div className="profile">
             <img src={userimg} alt="user pic" />
@@ -53,8 +53,8 @@ const time = async ()=> {
             <section>
                 <h1 className="heading">Weather forecast</h1>
                 <div className="weather">
-                <Weather  />
-                <Link to='/forecast'>
+                <Weather />
+                <Link to={`/${userid}/forecast`}>
                 <p>See more</p>
                 </Link> 
                  </div>   
