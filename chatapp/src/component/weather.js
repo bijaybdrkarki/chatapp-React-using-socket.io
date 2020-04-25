@@ -1,13 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './weather.css'
-
+// import { Router } from 'express';
+import {userId} from '../App'
 
 const Weather = () => {
-
+    
     useEffect(() => {
         newWeather();
+        return(()=>{
+            setIconWeather();
+            setcurrTemp();
+            setfeelTemp();
+            setTemptime()
+        })
     }, []);
+
+   let userid = useContext(userId);
+    // setid(useContext(userId))
+    
+
+    
+
     const [iconWeather, setIconWeather] = useState([]);
     const [currtemp, setcurrTemp] = useState([]);
     const [feeltemp, setfeelTemp] = useState([]);
@@ -59,7 +73,7 @@ const Weather = () => {
     {
     return ( <div className = "forecastContainer">
         <div className="headingButton">
-        <Link to="/" className="backButton"><button>Back</button></Link> 
+        <Link to={`/${userid}`} className="backButton"><button>Back</button></Link> 
         <h1 className="fullheading">Weather forecast for Next 5 days (3Hrs interval) </h1>
         </div>
        <div className="tempdata"> {temp} </div>
