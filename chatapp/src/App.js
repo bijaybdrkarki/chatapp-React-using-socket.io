@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
-import HeaderSidebar from './component/headerSidebar';
-import Mainbody from './component/main';
-// import { BrowserRouter as Router, Route} from 'react-router-dom';
+import React, {useState, createContext} from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Login from './component/login'
+import UserLoggedin from './component/userloggedin'
 
+const userId = createContext('')
 const App =() => {
-  const [menuclass, setmenuclass] = useState('others'); 
-  function menu(){
-      if (menuclass === 'others')
-      {
-        setmenuclass('others open');
-      }
-      else
-      {
-        setmenuclass('others');
-      }
+  const [userid, setuserid] = useState('');
+  const user = (value) =>{
+    setuserid(value);
   }
-    return (
-     <Router> 
-       <HeaderSidebar menuclass={menuclass} menu={menu}/>
-       <Mainbody menuclass={menuclass} />
-    </Router>)
+  return (
+   <userId.Provider value={userid}>
+    <Router>
+        <Switch>
+          <Route path='/' exact component={() => <Login user={user} userid={userid} />} />
+          <Route path={`/${userid}`} component={UserLoggedin}   />
+        </Switch>
+    </Router> 
+   </userId.Provider>
+  )  
 }
 
-export default App;
+export default App; 
+export {userId};
