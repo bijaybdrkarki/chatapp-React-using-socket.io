@@ -1,0 +1,30 @@
+:root {
+    --col-bg: #ffffff;
+    --col-bg-fg: #222222;
+    --col-accent1:  palevioletred;
+    --col-accent1-fg: #000000;
+    --col-accent2:  plum;
+    --col-accent2-fg: #000000;
+    --col-accent3:  mediumslateblue;
+    --col-accent3-fg: #ffffff;
+    --col-action: firebrick;
+    --col-action-fg: #ffffff;
+    --col-error: tomato;
+    --col-error-fg: #000000;
+    --font-body: serif;
+    --font-heading: sans-serif;
+    --animations: 0.3s;
+}
+
+.mainsize{
+    padding: 0; 
+    padding-top: 2em; 
+}
+@media screen and (min-width: 40em) {
+    .mainsize{
+        transition: margin-left var(--animations);
+    }
+    .lt-mr{
+        margin-left: 5em;  
+    }
+}
