@@ -1,6 +1,8 @@
-# READY TO GRADE
+# READY TO GRADE 
 
-# chatapp-React
+Please read all steps to run the app locally
+
+## chatapp-React
 
 
 step 1: download/clone the app
@@ -34,4 +36,10 @@ step 8: home page for all user looks same for now.
   iii) weather forecast info for toronto(city -hardcoded now) with data coming from weatherAPI. click see more to see forecast        of 5 days
 
 
-step 9:
+step 9: To check for chat, click to menu option on header and click chat so same for all three window.
+      by doing that you will see all the online users on left side of window including yourself. 
+      
+      
+step 10: To send messg you must click any one online user other than your self. and type the message you want to send in input field and must click send button (clicking enter will not send).
+
+step 11: to see message side select the window of reviever and do console log you can see object of message being received with actual messg, sender name and reviever name.
