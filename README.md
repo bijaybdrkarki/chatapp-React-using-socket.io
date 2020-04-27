@@ -42,4 +42,6 @@ step 9: To check for chat, click to menu option on header and click chat so same
       
 step 10: To send messg you must click any one online user other than your self. and type the message you want to send in input field and must click send button (clicking enter will not send).
 
-step 11: to see message side select the window of reviever and do console log you can see object of message being received with actual messg, sender name and reviever name.
+step 11: to see message side select the window of reviever and do console log you can see object of message being received with actual messg, sender name and reviever name. (check console for third one there is nothing ie. message was send only to specific user) displaying received message in browser message section is further enhancement
+
+step 12: close browser window for any one of user, and see online users for other two. now you can see only two user. or add few more users you can see all of them online in eachothers profile. Also if you visit any other page(like go back to home page from chat page and come back to chat) you will still be online
