@@ -23,7 +23,7 @@ const Mainbody = (props) => {
             <Switch>
                 <Route path={`/:${userid}`} exact component={Home}  />
                 <Route path={`/:${userid}/forecast`} component={Weather} />
-                <Route path={`/:${userid}/chat`} component={Chat} />
+                <Route path={`/:${userid}/chat`} component={()=><Chat  socket={props.socket} />} />
             </Switch>    
         </div>
        
