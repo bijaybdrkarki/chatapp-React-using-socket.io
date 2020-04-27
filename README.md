@@ -21,14 +21,17 @@ step 6: Open browser and type ```localhost:3000``` (to understand more open 3 di
 
 step 7: you will be prompted to user login just type any name in User id field (for now password field might be empty and all login criteria will be tested in next version). do same in all three terminal but remember to use different names
 
+
 step 8: home page for all user looks same for now. 
 
-  the home page has 
+  the home page has
+  
   i)user image , to do list this list is hard coded for now,
   
   
   ii)live ticking clock, current date and day of week
   
   iii) weather forecast info for toronto(city -hardcoded now) with data coming from weatherAPI. click see more to see forecast        of 5 days
+
 
 step 9:
